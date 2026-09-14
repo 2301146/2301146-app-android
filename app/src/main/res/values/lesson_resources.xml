@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lesson_title">두번쨰 앱</string>
+    <string name="lesson_greeting">안녕 경복대학교</string>
+    <string name="lesson_notice">[공지사항] 이번 학기 Android 수업은 매주 월요일에 대면으로 진행됩니다. 자세한 내용은 홈페이지를 참조해주세요.</string>
+    <string name="lesson_text_toast">TextView가 눌렸습니다</string>
+    <string name="lesson_button_toast">버튼이 눌렸습니다</string>
+
+    <style name="Theme.ResourceLesson" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#6200EE</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>
