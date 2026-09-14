@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app2_primary">#6200EE</color>
+    <color name="app2_notice_background">#1D6ECC</color>
+    <color name="app2_greeting_text">#FF0000</color>
+</resources>
