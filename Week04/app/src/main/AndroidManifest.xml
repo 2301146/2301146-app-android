@@ -7,18 +7,22 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/week04_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyAPP">
+        android:theme="@style/Theme.Week04">
         <activity
             android:name=".MainActivity3"
-            android:exported="false" />
+            android:label="@string/title3"
+            android:exported="true" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:label="@string/title2"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:label="@string/title1"
+            android:theme="@style/Theme.Week04.LCM"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

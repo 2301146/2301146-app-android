@@ -1,53 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <SeekBar
-        android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    tools:context=".MainActivity3">
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:maxHeight="8dp"
-        android:theme="@style/SeekBarColor"
-        android:thumbOffset="0dp" />
-
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:maxHeight="8dp"
-        android:progressDrawable="@drawable/seekbar_progress_style"
-        android:theme="@style/SeekBarColor"
-        android:thumb="@drawable/seekbar_thumb_shape"
-        android:thumbOffset="0dp" />
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:maxHeight="8dp"
-        android:progressDrawable="@drawable/seekbar_progress_style"
-        android:thumb="@drawable/seekbar_thumb_drawable01"
-        android:thumbOffset="0dp" />
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:maxHeight="8dp"
-        android:progressDrawable="@drawable/seekbar_progress_style"
-        android:thumb="@drawable/seekbar_thumb_drawable02"
-        android:thumbOffset="0dp" />
-    <SeekBar
-        android:id="@+id/seekbar04"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:maxHeight="8dp"
-        android:progressDrawable="@drawable/seekbar_progress_style"
-        android:thumb="@drawable/seekbar_thumb_drawable03"
-        android:thumbOffset="0dp" />
-</LinearLayout>
-
-
+        android:orientation="vertical"
+        android:padding="@dimen/week_padding">
+        <TextView android:id="@+id/textCelsius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_text"
+            android:freezesText="true"
+             />
+        <SeekBar android:id="@+id/seekCelsius"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:max="200"
+            android:progress="100"
+            android:contentDescription="@string/title3" />
+        <TextView android:id="@+id/textFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_text"
+            android:freezesText="true"
+             />
+        <SeekBar android:id="@+id/seekFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:max="200"
+            android:progress="100"
+            android:contentDescription="@string/title3" />
+        <RadioGroup android:id="@+id/groupDirection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radioCelsius"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/c_to_f" />
+            <RadioButton android:id="@+id/radioFahrenheit"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/f_to_c" />
+        </RadioGroup>
+        <Button android:id="@+id/buttonConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/convert"
+            android:textColor="@color/week_text"
+            android:backgroundTint="@color/week_gray" />
+        <Button android:id="@+id/buttonReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:textColor="@color/week_text"
+            android:backgroundTint="@color/week_gray" />
+        <TextView android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_text"
+            android:freezesText="true"
+             />
+    </LinearLayout>
+</ScrollView>

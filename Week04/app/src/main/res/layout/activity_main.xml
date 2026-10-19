@@ -1,80 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
-
-
-    <SeekBar
-        android:layout_width="match_parent"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20px" />
-
-    <RatingBar
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:rating="3"
-        android:layout_gravity="center"/>
-    <RatingBar
-        style="?android:attr/ratingBarStyleSmall"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="20dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:layout_width="0dp"
+        android:orientation="vertical"
+        android:padding="@dimen/week_padding">
+        <TextView android:id="@+id/textFirst"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="0dp"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_text"
+            android:freezesText="true"
+             />
+        <SeekBar android:id="@+id/seekFirst"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:max="99"
+            android:progress="0"
+            android:contentDescription="@string/title1" />
+        <TextView android:id="@+id/textSecond"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-        <ProgressBar
-            style="?android:attr/progressBarStyleSmall"
-            android:layout_width="0dp"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_text"
+            android:freezesText="true"
+             />
+        <SeekBar android:id="@+id/seekSecond"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:max="99"
+            android:progress="0"
+            android:contentDescription="@string/title1" />
+        <Button android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
-
+            android:text="@string/calculate_lcm"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/week_purple" />
+        <TextView android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_text"
+            android:freezesText="true"
+            android:text="@string/result" />
     </LinearLayout>
-
-    <ProgressBar
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-
-        android:max="100"
-        android:min="0"
-
-        android:progress="50"/>
-
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"/>
-
-    <com.google.android.material.progressindicator.CircularProgressIndicator
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
-    <com.google.android.material.loadingindicator.LoadingIndicator
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
-
-</LinearLayout>
+</ScrollView>

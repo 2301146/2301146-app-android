@@ -1,106 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
     tools:context=".MainActivity2">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ProgressBar
-            android:layout_width="0dp"
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/week_padding">
+        <TextView android:id="@+id/labelWeight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:indeterminateTint="#324EB1"
-            android:max="100"
-            android:layout_gravity="center"
-            android:min="0"/>
-
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="0dp"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_blue"
+            android:freezesText="true"
+            android:text="@string/weight" />
+        <SeekBar android:id="@+id/seekWeight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:max="230"
+            android:progress="0"
+            android:contentDescription="@string/weight" />
+        <TextView android:id="@+id/textWeight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:indeterminateTint="#00A5EB"/>
-
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_blue"
+            android:freezesText="true"
+             />
+        <TextView android:id="@+id/labelHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_blue"
+            android:freezesText="true"
+            android:text="@string/height" />
+        <SeekBar android:id="@+id/seekHeight"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:max="280"
+            android:progress="0"
+            android:contentDescription="@string/height" />
+        <TextView android:id="@+id/textHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_blue"
+            android:freezesText="true"
+             />
+        <TextView android:id="@+id/textBmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/week_text_size"
+            android:textColor="@color/week_blue"
+            android:freezesText="true"
+             />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="20%"
-        android:layout_gravity="center"/>
-    <ProgressBar
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:min="0"
-        android:max="100"
-        android:progress="35" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ProgressBar
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/circulras"
-            android:layout_gravity="center"
-            android:min="0"
-            android:max="100"
-            android:progress="35"
-            android:progressDrawable="@drawable/circles"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="20%"
-            />
-
-    </FrameLayout>
-
-    <ProgressBar
-        android:layout_marginTop="20dp"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/circulras"
-        android:layout_gravity="center"
-        android:min="0"
-        android:max="100"
-        android:progress="0"
-        android:progressDrawable="@drawable/vertical"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="20%"
-        />
-
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="10증가"/>
-
-          <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="10감소"/>
-
-
-</LinearLayout>
+</ScrollView>

@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:allowBackup="true" android:label="5주차 과제"
+        android:icon="@mipmap/ic_launcher" android:theme="@style/Theme.Report09"
+        android:supportsRtl="true">
+        <activity android:name=".GradeActivity" android:label="학년 입력" android:exported="false" />
+        <activity android:name=".HobbyActivity" android:label="취미 입력" android:exported="false"
+            android:enableOnBackInvokedCallback="false" />
+        <activity android:name=".MainActivity" android:label="Report1"
+            android:theme="@style/Theme.Report09" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity2" android:label="Report2"
+            android:theme="@style/Theme.Report09.Blue" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity3" android:label="Report3"
+            android:theme="@style/Theme.Report09" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity4" android:label="Report2 취미"
+            android:theme="@style/Theme.Report09" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
