@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PDF의 옵션 메뉴를 표시하기 위해 ActionBar가 있는 테마를 사용합니다. -->
+    <style name="Base.Theme.Week09" parent="Theme.Material3.Light">
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+    <style name="Theme.Week09" parent="Base.Theme.Week09" />
+</resources>
